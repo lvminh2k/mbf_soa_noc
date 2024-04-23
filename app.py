@@ -22,6 +22,6 @@ def get_student_by_id():
     for student in submit_list:
         if student["id"] == id:
             return student
-    return {"message":"can not find student" + str(id)}
+    return {"message":"can not find student with id = " + str(id)}
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
