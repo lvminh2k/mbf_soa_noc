@@ -19,7 +19,7 @@ def get_submit_list():
 @app.route("/get_student_by_id", methods=["POST"])
 def get_student_by_id():
     id = request.json["id"]
-    for (student in submit_list):
+    for student in submit_list:
         if student["id"] == id:
             return student
     return {"message":"can not find student" + str(id)}
